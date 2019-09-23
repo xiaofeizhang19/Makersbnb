@@ -1,8 +1,6 @@
-function Space(name, type, owner, location, price, capacity) {
+function Space(name, description, price, capacity) {
   this.name = name;
-  this.type = type;
-  this.owner = owner;
-  this.location = location;
+  this.description = description;
   this.price = price;
   this.capacity = capacity;
 };
