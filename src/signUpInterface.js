@@ -7,10 +7,10 @@ $(document).ready(function() {
     if (password === confirmPassword) {
       user1 = new User(username, email, password);
       $("#login-confirmation").text("Logged in as: " + username);
-      // window.location.href = "../Makersbnb/createSpace.html";
+      sessionStorage.setItem('userName', username);
+      window.location.href = "./menu.html";
     } else {
       alert("Password doesn't match");
     };
-    // localStorage.setItem('currentUser', username);
   });
 });

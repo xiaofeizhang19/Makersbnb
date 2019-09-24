@@ -27,6 +27,11 @@ button {
   font-size: 30px;
 }
 
+button:disabled {
+  color:lightgray;
+  font-size: 30px;
+}
+
 input {
   font: 25px "Helvetica", "Arial", "sans-serif";
 }
