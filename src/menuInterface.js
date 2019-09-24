@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  $('#create').click(function(){
+    window.location.replace("./createSpace.html");
+  });
+  $('#list').click(function(){
+    window.location.replace("./listSpace.html");
+  });
+  $('#logout').click(function(){
+    window.location.replace("https://bbc.co.uk/sport/cricket");
+  });
+});
