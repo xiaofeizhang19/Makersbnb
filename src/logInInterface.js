@@ -4,7 +4,8 @@ $(document).ready(function() {
 
     if ($('#password').val() === user.password) {
       $("#login-confirmation").text("Logged in as: " + user.username);
-      window.location.href = "../Makersbnb/createSpace.html";
+      sessionStorage.setItem('userName', $('#username').val());
+      window.location.href = "./menu.html";
     } else {
       alert("Password incorrect");
     };
