@@ -1,6 +1,6 @@
 
 
-$(document).ready(function(){
+git branch
   $('#submit').click(function(){
     var name = $('#name').val();
     var description = $('#description').val();
