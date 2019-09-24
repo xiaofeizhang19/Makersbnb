@@ -1,0 +1,32 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="./src/space.js"></script>
+<script>
+  $(document).ready(function(){
+  space = new Space("Space1", "2 bed flat", 200, 5);
+  $('#name').html(space.name);
+  $('#capacity').html(space.capacity);
+  $('#price').html(space.price);
+  $('#description').html(space.description);
+});
+</script>
+
+<head>
+  <link rel="stylesheet" href="makersBnB.css">
+  <h1>List Space</h1>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>
+        <table class="plane">
+          <tr><td rowspan= "4"><img src="./public/house.jpg" width="50" height="50"></td><td id="name">Name</td></tr>
+          <tr><td id="capacity">Capacity</td></tr>
+          <tr><td id="price">Price</td></tr>
+          <tr><td id="description">Description</td></tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
