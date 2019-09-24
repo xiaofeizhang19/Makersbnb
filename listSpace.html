@@ -3,11 +3,19 @@
 <script src="./src/space.js"></script>
 <script>
   $(document).ready(function(){
-  space = new Space("Space1", "2 bed flat", 200, 5);
-  $('#name').html(space.name);
-  $('#capacity').html(space.capacity);
-  $('#price').html(space.price);
-  $('#description').html(space.description);
+  // space = new Space("Space1", "2 bed flat", 200, 5);
+
+  var name = sessionStorage.getItem('name', name);
+  var description = sessionStorage.getItem('description', description);
+  var capacity = sessionStorage.getItem('capacity', capacity);
+  var price = sessionStorage.getItem('price', price);
+  var dateFrom = sessionStorage.getItem('dateFrom', dateFrom);
+  var dateTo = sessionStorage.getItem('dateTo', dateTo);
+
+  $('#name').html(name);
+  $('#capacity').html(capacity);
+  $('#price').html(price);
+  $('#description').html(description);
 });
 </script>
 
