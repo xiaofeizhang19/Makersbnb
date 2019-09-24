@@ -7,7 +7,7 @@ $(document).ready(function() {
     if (password === confirmPassword) {
       user1 = new User(username, email, password);
       $("#login-confirmation").text("Logged in as: " + username);
-      // window.location.href = "file:///Users/student/Documents/Makersbnb/createSpace.html";
+      // window.location.href = "../Makersbnb/createSpace.html";
     } else {
       alert("Password doesn't match");
     };
