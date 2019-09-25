@@ -2,13 +2,21 @@
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="./src/space.js"></script>
 <script src="./src/listSpaceInterface.js"></script>
+<script src="./calendar/js/pickmeup.js"></script>
+
 
 <script>
+
+pickmeup('input', {
+  hide_on_select:true
+});
 
 </script>
 
 <head>
   <link rel="stylesheet" href="makersBnB.css">
+  <link rel="stylesheet" href="./calendar/css/pickmeup.css">
+
   <h1>List Space</h1>
 </head>
 <body>
@@ -24,6 +32,12 @@
       </td>
     </tr>
   </table>
+
+  <input type="text" value="06-09-2019">
+
   <button id="mainmenu">Main menu</button>
+
+
+
 </body>
 </html>
