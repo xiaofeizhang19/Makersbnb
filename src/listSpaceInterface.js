@@ -25,17 +25,23 @@ $(document).ready(function(){
   dateArray.push(new Date(2019,09-1,22).getTime());
   dateArray.push(new Date(2019,09-1,24).getTime());
 
-  
-  pickmeup('input', {
-    hide_on_select:false,
-    mode:'range',
-    render: function(date) {
-      if ($.inArray(date.getTime(), dateArray) > -1){
-        return {
-            disabled   : true,
-            class_name : 'disabled'
+  var spaceArray = [];
+  spaceArray.push(dateArray);
+  spaceArray.push(dateArray);
+
+  for (i = 0; i<spaceArray.length; i++){
+    spaceDateArray = spaceArray[0];
+    pickmeup('#calender'+i, {
+      hide_on_select:false,
+      mode:'range',
+      render: function(date) {
+        if ($.inArray(date.getTime(), spaceDateArray) > -1){
+          return {
+              disabled   : true,
+              class_name : 'disabled'
+          }
         }
       }
-    }
-  });
+    });
+  }
 });

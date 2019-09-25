@@ -1199,6 +1199,7 @@
 	function pickmeup_init (target, initial_options) {
 		if (typeof target == 'string') {
 			target = document.querySelector(target);
+			console.log(target);
 		}
 		if (!target) {
 			return null;

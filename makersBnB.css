@@ -7,7 +7,7 @@ table {
 
 table.plane {
   width: 100%;
-  border:1;
+  border:0;
   box-shadow:none;
 }
 
@@ -18,7 +18,7 @@ td {
 }
 
 td.plane {
-  border:1;
+  border:0;
   text-align: left;
 }
 
