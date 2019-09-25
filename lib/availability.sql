@@ -1,0 +1,1 @@
+CREATE TABLE availability(availability_id SERIAL PRIMARY KEY, start_date DATE, end_date DATE, status VARCHAR(15), space_id INT, FOREIGN KEY(space_id) REFERENCES space(space_id));
