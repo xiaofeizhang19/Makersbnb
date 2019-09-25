@@ -2,28 +2,52 @@
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="./src/space.js"></script>
 <script src="./src/listSpaceInterface.js"></script>
-
-<script>
-
-</script>
+<script src="./calendar/js/pickmeup.js"></script>
 
 <head>
+<<<<<<< HEAD:public/listSpace.html
   <link rel="stylesheet" href="stylesheets/makersBnB.css">
+=======
+  <link rel="stylesheet" href="makersBnB.css">
+  <link rel="stylesheet" href="listSpace.css">
+  <link rel="stylesheet" href="./calendar/css/pickmeup.css">
+>>>>>>> 0d0ac1b6914753b8b8a9bf298bb7d98bc94b5d5d:listSpace.html
   <h1>List Space</h1>
 </head>
 <body>
-  <table>
+  <table class="create">
     <tr>
-      <td>
+      <td width="80%">
         <table class="plane">
-          <tr><td rowspan= "4"><img src="./public/house.jpg" width="50" height="50"></td><td id="name">Name</td></tr>
-          <tr><td id="capacity">Capacity</td></tr>
-          <tr><td id="price">Price</td></tr>
-          <tr><td id="description">Description</td></tr>
+          <tr><td width="10%" rowspan="5" colspan="3"><img src="./public/house.jpg" width="50" height="50"></td></tr>
+          <tr><td class="plane">Name: </td><td class="plane" id="name">Name</td></tr>
+          <tr><td class="plane">Capacity: </td><td class="plane" id="capacity">Capacity</td></tr>
+          <tr><td class="plane">Price: </td><td class="plane" id="price">Price</td></tr>
+          <tr><td class="plane">Description: </td><td class="plane" id="description">Description</td></tr>
         </table>
       </td>
+      <td><input id="calender0" type="text" value="Date"></td>
+      <td><button id="save">Save</button></td>
     </tr>
+    <tr>
+        <td width="80%">
+          <table class="plane">
+            <tr><td width="10%" rowspan="5" colspan="3"><img src="./public/house.jpg" width="50" height="50"></td></tr>
+            <tr><td class="plane">Name: </td><td class="plane" id="name">Name</td></tr>
+            <tr><td class="plane">Capacity: </td><td class="plane" id="capacity">Capacity</td></tr>
+            <tr><td class="plane">Price: </td><td class="plane" id="price">Price</td></tr>
+            <tr><td class="plane">Description: </td><td class="plane" id="description">Description</td></tr>
+          </table>
+        </td>
+        <td><input id="calender1" type="text" value="Date"></td>
+        <td><button id="save">Save</button></td>
+      </tr>
+
   </table>
+
   <button id="mainmenu">Main menu</button>
+
+
+
 </body>
 </html>
