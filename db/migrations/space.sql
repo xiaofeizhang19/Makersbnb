@@ -1,0 +1,1 @@
+CREATE TABLE space(space_id SERIAL PRIMARY KEY, name VARCHAR(60), description VARCHAR(1000), price INT, capacity INT, owner_id INT, FOREIGN KEY(owner_id) REFERENCES owner(id));
