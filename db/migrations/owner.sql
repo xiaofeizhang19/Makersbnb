@@ -1,1 +1,0 @@
-CREATE TABLE owner(id SERIAL PRIMARY KEY, username VARCHAR(50) UNIQUE NOT NULL, password_hash VARCHAR(200), email VARCHAR(60));
