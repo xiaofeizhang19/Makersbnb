@@ -18,11 +18,14 @@ $(document).ready(function(){
   
   
   // WARNING !!!!! Javascript is wierd, and treats months from 0-11 !!!!!!!
+  // This array holds dates you want to disable on the calendar popup
+  //
   var dateArray = [];
   dateArray.push(new Date(2019,09-1,20).getTime());
   dateArray.push(new Date(2019,09-1,22).getTime());
   dateArray.push(new Date(2019,09-1,24).getTime());
 
+  
   pickmeup('input', {
     hide_on_select:false,
     mode:'range',

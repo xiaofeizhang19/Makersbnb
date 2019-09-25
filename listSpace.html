@@ -6,25 +6,26 @@
 
 <head>
   <link rel="stylesheet" href="makersBnB.css">
+  <link rel="stylesheet" href="listSpace.css">
   <link rel="stylesheet" href="./calendar/css/pickmeup.css">
-
   <h1>List Space</h1>
 </head>
 <body>
-  <table>
+  <table class="create">
     <tr>
-      <td>
+      <td width="80%">
         <table class="plane">
-          <tr><td rowspan= "4"><img src="./public/house.jpg" width="50" height="50"></td><td id="name">Name</td></tr>
-          <tr><td id="capacity">Capacity</td></tr>
-          <tr><td id="price">Price</td></tr>
-          <tr><td id="description">Description</td></tr>
+          <tr><td width="10%" rowspan="5" colspan="3"><img src="./public/house.jpg" width="50" height="50"></td></tr>
+          <tr><td class="plane">Name: </td><td class="plane" id="name">Name</td></tr>
+          <tr><td class="plane">Capacity: </td><td class="plane" id="capacity">Capacity</td></tr>
+          <tr><td class="plane">Price: </td><td class="plane" id="price">Price</td></tr>
+          <tr><td class="plane">Description: </td><td class="plane" id="description">Description</td></tr>
         </table>
       </td>
+      <td rowspan="5"><input id="testCal" type="text" value="Date"></td>
+      <td><button id="save">Save</button></td>
     </tr>
   </table>
-
-  <input id="testCal" type="text" value="06-09-2019">
 
   <button id="mainmenu">Main menu</button>
 
