@@ -7,7 +7,6 @@ module.exports = {
       // (err, result) => {
       //   console.log('callback');
       //   response.send(result);
-      }
     )
   }
 }

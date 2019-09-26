@@ -4,6 +4,21 @@ $(document).ready(function(){
     window.location.replace("./menu.html");
   });
 
+  $('#book0').click(function(){
+    $.ajax({
+      type: "POST",
+      url: 'http://localhost:3000/booking',
+      data: {
+        calendar0
+      },
+      success: () => {
+        console.log("success")
+        // window.location.href = "./menu.html";
+      }
+    })
+    alert("Your booking request has been sent to the owner for approval");
+  });
+
   var name = sessionStorage.getItem('name', name);
   var description = sessionStorage.getItem('description', description);
   var capacity = sessionStorage.getItem('capacity', capacity);
@@ -15,8 +30,8 @@ $(document).ready(function(){
   $('#capacity').html(capacity);
   $('#price').html(price);
   $('#description').html(description);
-  
-  
+
+
   // WARNING !!!!! Javascript is wierd, and treats months from 0-11 !!!!!!!
   // This array holds dates you want to disable on the calendar popup
   //
