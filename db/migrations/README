@@ -1,0 +1,12 @@
+1) First off launch this command to create a new database and a new db user:
+
+    psql -f 01_create_database_and_user.sql
+
+2) after, execute the other migrations in order, specifying the new db and user in the command
+
+    psql -U makersbnb_user -d makersbnb -f 02_create_table_users.sql
+    psql -U makersbnb_user -d makersbnb -f 03_create_table_space.sql 
+    psql -U makersbnb_user -d makersbnb -f 04_create_table_space.sql
+    psql -U makersbnb_user -d makersbnb -f 05_create_table_booking.sql
+    
+and so on...
