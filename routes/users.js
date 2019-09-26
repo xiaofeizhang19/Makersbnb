@@ -17,7 +17,8 @@ router.get('/:id', function(req, res, next) {
 router.post('/', function(req, res) {
   console.log('router');
   console.log(req.body)
-  // users.create(req.body, res);
+  users.create(req.body, res);
+  res.send("hello")
 });
 
 module.exports = router;

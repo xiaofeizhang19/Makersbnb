@@ -18,3 +18,8 @@ function query(query, parameters, callback) {
 
 module.exports = query;
 
+query('INSERT INTO users (username, password_hash, email) VALUES ($1::text, $2::text, $3::text)', 
+['cat', '123', 'cat@email.com'], (err, res) => {
+    console.log('callback');
+    console.log(res);
+   });

@@ -16,12 +16,14 @@ $(document).ready(function() {
           password,
           email
         },
-        success: () => {
+        success: (data) => {
+          alert(data);
           window.location.href = "./menu.html";
         }
-      })
+      });
     } else {
       alert("Password doesn't match");
     };
+
   });
 });
