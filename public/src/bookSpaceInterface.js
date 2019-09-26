@@ -5,20 +5,24 @@ $(document).ready(function(){
   });
 
   $('#book0').click(function(){
-    var date = $('#calendar0').val();
-    console.log(date);
-    // $.ajax({
-    //   type: "POST",
-    //   url: 'http://localhost:3000/booking',
-    //   data: {
-    //     calendar0
-    //   },
-    //   success: () => {
-    //     console.log("success")
-    //     // window.location.href = "./menu.html";
-    //   }
-    // })
-    // alert("Your booking request has been sent to the owner for approval");
+    var dateRange = ($('#calendar0').val()).split(' ');
+    var startDate = dateRange[0];
+    var endDate = dateRange[2];
+    console.log(startDate);
+    console.log(endDate);
+    $.ajax({
+      type: "POST",
+      url: 'http://localhost:3000/booking',
+      data: {
+        startDate,
+        endDate
+      },
+      success: (data) => {
+        console.log(data)
+        // window.location.href = "./menu.html";
+      }
+    });
+    alert("Your booking request has been sent to the owner for approval");
   });
 
   var name = sessionStorage.getItem('name', name);
