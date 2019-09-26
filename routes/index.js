@@ -6,5 +6,7 @@ router.get('/', function(req, res, next) {
   res.redirect('menu.html');
 });
 
+router.post('/')
+
 
 module.exports = router;

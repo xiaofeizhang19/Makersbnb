@@ -1,4 +1,5 @@
 const { Client } = require('pg')
+
 // I create a function to help queries execution
 function query(query, parameters, callback) {
     const client = new Client({
@@ -16,3 +17,4 @@ function query(query, parameters, callback) {
 };
 
 module.exports = query;
+
