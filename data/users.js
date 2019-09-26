@@ -1,3 +1,5 @@
+const query = require('connection');
+
 module.exports = {
   create: (data, response) => {
     console.log('create');
