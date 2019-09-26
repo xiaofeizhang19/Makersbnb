@@ -13,12 +13,12 @@ function query(query, parameters, callback) {
     client.query(query, parameters, (err, res) => {
         client.end();
         callback(err, res);
-    });    
+    });
 };
 
 module.exports = query;
 
-query('INSERT INTO users (username, password_hash, email) VALUES ($1::text, $2::text, $3::text)', 
+query('INSERT INTO users (username, password_hash, email) VALUES ($1::text, $2::text, $3::text)',
 ['cat', '123', 'cat@email.com'], (err, res) => {
     console.log('callback');
     console.log(res);
