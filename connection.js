@@ -1,6 +1,6 @@
 const { Client } = require('pg')
 const client = new Client({
-    user: 'valeriaserci',
+    user: 'xiaofeizhang',
     host: 'localhost',
     database: 'makersbnb',
     password: '',
@@ -12,6 +12,8 @@ client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
 });
 
 client.query('SELECT NOW()', (err, res) => {
-    console.log(err, res)
+    console.log(err, res.rows[0])
     client.end()
   })
+
+module.exports = {}
