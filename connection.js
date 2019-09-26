@@ -1,19 +1,20 @@
 const { Client } = require('pg')
-const client = new Client({
-    user: 'xiaofeizhang',
-    host: 'localhost',
-    database: 'makersbnb',
-    password: '',
-    port: 5432,
-  })
-client.connect()
-client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
-  console.log(err ? err.stack : res.message) // Hello World!
-});
 
-client.query('SELECT NOW()', (err, res) => {
-    console.log(err, res.rows[0])
-    client.end()
-  })
+// I create a function to help queries execution
+function query(query, parameters, callback) {
+    const client = new Client({
+        user: 'makersbnb_user',
+        host: 'localhost',
+        database: 'makersbnb',
+        password: '',
+        port: 5432,
+      });
+    client.connect();
+    client.query(query, parameters, (err, res) => {
+        client.end();
+        callback(err, res);
+    });    
+};
 
-module.exports = {}
+module.exports = query;
+
