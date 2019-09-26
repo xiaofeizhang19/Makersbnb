@@ -8,7 +8,7 @@ $(document).ready(function(){
     window.location.replace("./createSpace.html");
   });
   $('#list').click(function(){
-    window.location.replace("./listSpace.html");
+    window.location.replace("./bookSpace.html");
   });
   $('#logout').click(function(){
     sessionStorage.removeItem('userName');

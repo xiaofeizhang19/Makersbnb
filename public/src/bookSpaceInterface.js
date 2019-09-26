@@ -5,18 +5,20 @@ $(document).ready(function(){
   });
 
   $('#book0').click(function(){
-    $.ajax({
-      type: "POST",
-      url: 'http://localhost:3000/booking',
-      data: {
-        calendar0
-      },
-      success: () => {
-        console.log("success")
-        // window.location.href = "./menu.html";
-      }
-    })
-    alert("Your booking request has been sent to the owner for approval");
+    var date = $('#calendar0').val();
+    console.log(date);
+    // $.ajax({
+    //   type: "POST",
+    //   url: 'http://localhost:3000/booking',
+    //   data: {
+    //     calendar0
+    //   },
+    //   success: () => {
+    //     console.log("success")
+    //     // window.location.href = "./menu.html";
+    //   }
+    // })
+    // alert("Your booking request has been sent to the owner for approval");
   });
 
   var name = sessionStorage.getItem('name', name);
@@ -46,7 +48,7 @@ $(document).ready(function(){
 
   for (i = 0; i<spaceArray.length; i++){
     spaceDateArray = spaceArray[0];
-    pickmeup('#calender'+i, {
+    pickmeup('#calendar'+i, {
       hide_on_select:false,
       mode:'range',
       render: function(date) {
