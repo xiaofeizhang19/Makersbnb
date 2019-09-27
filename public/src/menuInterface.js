@@ -8,19 +8,15 @@ $(document).ready(function(){
     window.location.replace("./createSpace.html");
   });
   $('#list').click(function(){
-<<<<<<< HEAD
-    window.location.replace("./bookSpace.html");
-=======
     $.ajax({
       type: "GET",
       url: 'http://localhost:3000/space',
       data: {},
       success: (data) => {
         sessionStorage.setItem('listSpaces', data);
-        window.location.href = "./listSpace.html";
+        window.location.href = "./bookSpace.html";
       }
     });
->>>>>>> 511f773ade1b3fa4694f75ad593aa324950199c9
   });
   $('#logout').click(function(){
     sessionStorage.removeItem('userName');
