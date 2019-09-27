@@ -21,8 +21,9 @@ $(document).ready(function() {
         username,
         password,
       },
-      success: (data) => {
-        // alert(data);
+      success: () => {
+        $("#login-confirmation").text("Logged in as: " + user.username);
+        sessionStorage.setItem('userName', $('#username').val());
         window.location.href = "./menu.html";
       }
     });
