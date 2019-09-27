@@ -6,7 +6,7 @@ $(document).ready(function() {
     var confirmPassword = $('#confirmPassword').val();
     if (password === confirmPassword) {
       // user1 = new User(username, email, password);
-      $("#login-confirmation").text("Logged in as: " + username);
+      // $("#login-confirmation").text("Logged in as: " + username);
       // sessionStorage.setItem('userName', username);
       $.ajax({
         type: "POST",
@@ -17,8 +17,17 @@ $(document).ready(function() {
           email
         },
         success: (data) => {
-          alert(data);
+          alert("We have signed you up");
           window.location.href = "./menu.html";
+        },
+        error: (xhr, status, error) => {
+          if (xhr.status === 409) {
+            alert("We already have one of you and don't want two");
+          } else if (xhr.status === 400) {
+            alert("You need to fill all fields");
+          } else {
+            alert("Sorry, something went wrong. Please try again later.");
+          }
         }
       });
     } else {

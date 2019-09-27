@@ -1,7 +1,7 @@
 const { Client } = require('pg')
 
 // I create a function to help queries execution
-function query(query, parameters, callback) {
+async function query(query, parameters) {
     const client = new Client({
         user: 'makersbnb_user',
         host: 'localhost',
@@ -10,10 +10,12 @@ function query(query, parameters, callback) {
         port: 5432,
       });
     client.connect();
-    client.query(query, parameters, (err, res) => {
+
+    try {
+        return await client.query(query, parameters);
+    } finally {
         client.end();
-        callback(err, res);
-    });    
+    }
 };
 
 module.exports = query;
