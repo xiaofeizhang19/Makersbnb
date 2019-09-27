@@ -8,7 +8,6 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   await users.login(req.body, res);
-  console.log(res);
 });
 
 module.exports = router;

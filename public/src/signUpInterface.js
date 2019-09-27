@@ -21,10 +21,10 @@ $(document).ready(function() {
           window.location.href = "./logInPage.html";
         },
         error: (xhr, status, error) => {
-          if (xhr.status === 409) {
-            alert("We already have one of you and don't want two");
-          } else if (xhr.status === 400) {
+          if (xhr.status === 400) {
             alert("You need to fill all fields");
+          } else if (xhr.status === 409) {
+            alert("We already have one of you and don't want two");
           } else {
             alert("Sorry, something went wrong. Please try again later.");
           }
