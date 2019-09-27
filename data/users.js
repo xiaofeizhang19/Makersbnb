@@ -4,17 +4,16 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 module.exports = {
-<<<<<<< HEAD
-    create: (data, response) => {
-        console.log('hello we are in data');
-        console.log(data);
+    // create: (data, response) => {
+    //     console.log('hello we are in data');
+    //     console.log(data);
 
-    query('INSERT INTO users (username, password_hash, email) VALUES ($1::text, $2::text, $3::text)',
-        [data.username, data.password, data.email], (err, res) => {
-            console.log('callback');
-            console.log('wuauuahkbkhvbhsjvshjg');
-           });
-=======
+    // query('INSERT INTO users (username, password_hash, email) VALUES ($1::text, $2::text, $3::text)',
+    //     [data.username, data.password, data.email], (err, res) => {
+    //         console.log('callback');
+    //         console.log('wuauuahkbkhvbhsjvshjg');
+    //        });
+
   
   createAsync: async (data, response) => {
     let hash;
@@ -55,7 +54,6 @@ module.exports = {
       response.status(401);
       response.send({"result": {"error": "LOGIN_FAILED"}});
       return;
->>>>>>> 511f773ade1b3fa4694f75ad593aa324950199c9
     }
 
     const hash = result.rows[0].password_hash;
