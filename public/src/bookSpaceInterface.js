@@ -5,17 +5,21 @@ $(document).ready(function(){
   });
 
   $('#book0').click(function(){
-    var dateRange = ($('#calendar0').val()).split(' ');
-    var startDate = dateRange[0];
-    var endDate = dateRange[2];
-    console.log(startDate);
-    console.log(endDate);
+    var dateRange = ($('#calendar0').val().split(' '));
+    var check_in = dateRange[0];
+    var check_out = dateRange[2];
+    var space_id = 2;
+    var customer_id = 1;
+    // console.log(dateRange);
+    // console.log(check_out);
     $.ajax({
       type: "POST",
       url: 'http://localhost:3000/booking',
       data: {
-        startDate,
-        endDate
+        check_in,
+        check_out,
+        space_id,
+        customer_id
       },
       success: (data) => {
         console.log(data)

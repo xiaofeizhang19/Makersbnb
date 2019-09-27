@@ -1,3 +1,4 @@
+const booking = require('../data/booking');
 var express = require('express');
 var router = express.Router();
 
@@ -7,8 +8,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res) {
-  console.log('router');
   console.log(req.body);
+  booking.create(req.body, res);
   res.send("success");
 });
 
