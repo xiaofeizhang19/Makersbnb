@@ -27,11 +27,11 @@ $(document).ready(function(){
         ownerId
       },
       success: (data) => {
-        alert(data);
-        window.location.href = "./menu.html";
+        //alert(data);
+        //window.location.replace("./listSpace2.html&"+data);
       }
     });
-    space = new Space(name, description, price, capacity);
-    window.location.replace("./listSpace.html");
+    //space = new Space(name, description, price, capacity);
+    //window.location.replace("./listSpace.html");
   })
 });

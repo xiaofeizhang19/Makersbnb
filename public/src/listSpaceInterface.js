@@ -4,17 +4,28 @@ $(document).ready(function(){
     window.location.replace("./menu.html");
   });
 
-  var name = sessionStorage.getItem('name', name);
-  var description = sessionStorage.getItem('description', description);
-  var capacity = sessionStorage.getItem('capacity', capacity);
-  var price = sessionStorage.getItem('price', price);
-  var dateFrom = sessionStorage.getItem('dateFrom', dateFrom);
-  var dateTo = sessionStorage.getItem('dateTo', dateTo);
+  spaceListString = sessionStorage.getItem('listSpaces');
+  spaceList = JSON.parse(spaceListString);
+  var ownerId = spaceList[0].owner_id;
+  var id = spaceList[0].id;
+  var name = spaceList[0].name;
+  var description = spaceList[0].description;
+  var capacity = spaceList[0].capacity;
+  var price = spaceList[0].price;
 
-  $('#name').html(name);
-  $('#capacity').html(capacity);
-  $('#price').html(price);
-  $('#description').html(description);
+  // var name = sessionStorage.getItem('name', name);
+  // var description = sessionStorage.getItem('description', description);
+  // var capacity = sessionStorage.getItem('capacity', capacity);
+  // var price = sessionStorage.getItem('price', price);
+  // var dateFrom = sessionStorage.getItem('dateFrom', dateFrom);
+  // var dateTo = sessionStorage.getItem('dateTo', dateTo);
+
+  $('#name1').html(name);
+  $('#capacity1').html(capacity);
+  $('#price1').html(price);
+  $('#description1').html(description);
+  $('#id1').html(id);
+  $('#ownerId1').html(ownerId);
   
   
   // WARNING !!!!! Javascript is wierd, and treats months from 0-11 !!!!!!!

@@ -1,18 +1,5 @@
-// const query = require('./connection');
-// module.exports = {
-//     create: (data, response) => {
-//         console.log('hello we are in spaceData');
-//         console.log(data);
-
-//     query('INSERT INTO space (name, description, price, capacity, owner_id) VALUES ($1::text, $2::text, $3::text, $4::text, $5::text)', 
-//         [data.name, data.description, data.price, data.capacity, data.ownerId], (err, res) => {
-//             console.log('callback');
-//             console.log('INSERT INTO SPACE');
-//            });
-//     }
-// }
-
 const query = require('./connection');
+
 module.exports = {
     create: (data, response) => {
         console.log('hello we are in data');
@@ -25,5 +12,17 @@ module.exports = {
             console.log(err);
             console.log(res);
            });
+    },
+
+   
+    read: (data, response) => {
+        query('SELECT id, name, description, price, capacity, owner_id FROM space',[], (err, res) => {
+        
+        var test2 = JSON.stringify(res.rows);
+        response.send(test2);
+    });
+    
+    //response.send({"result": {"session_id": 0}});
+   
     }
 }

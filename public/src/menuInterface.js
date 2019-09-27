@@ -8,7 +8,15 @@ $(document).ready(function(){
     window.location.replace("./createSpace.html");
   });
   $('#list').click(function(){
-    window.location.replace("./listSpace.html");
+    $.ajax({
+      type: "GET",
+      url: 'http://localhost:3000/space',
+      data: {},
+      success: (data) => {
+        sessionStorage.setItem('listSpaces', data);
+        window.location.href = "./listSpace.html";
+      }
+    });
   });
   $('#logout').click(function(){
     sessionStorage.removeItem('userName');
