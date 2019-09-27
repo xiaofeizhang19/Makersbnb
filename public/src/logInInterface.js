@@ -21,6 +21,11 @@ $(document).ready(function() {
 
         sessionStorage.setItem('userName', user_id);
         window.location.href = "./menu.html";
+      },
+      error: (xhr, status, error) => {
+        if (xhr.status === 401) {
+          alert("Invalid username or password");
+        }
       }
     });
 
