@@ -5,13 +5,7 @@ $(document).ready(function() {
     
     user = new User('name', 'email@email.com', 'password')
 
-    // if ($('#password').val() === user.password) {
-    //   $("#login-confirmation").text("Logged in as: " + user.username);
-    //   sessionStorage.setItem('userName', $('#username').val());
     //   window.location.href = "./menu.html";
-    // } else {
-    //   alert("Password incorrect");
-    // };
     // localStorage.setItem('currentUser', username);
 
     $.ajax({
@@ -21,9 +15,11 @@ $(document).ready(function() {
         username,
         password,
       },
-      success: () => {
-        $("#login-confirmation").text("Logged in as: " + user.username);
-        sessionStorage.setItem('userName', $('#username').val());
+      success: (data) => {
+        let obj = JSON.parse(data);
+        let user_id = obj.id;
+
+        sessionStorage.setItem('userName', user_id);
         window.location.href = "./menu.html";
       }
     });

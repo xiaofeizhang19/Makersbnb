@@ -37,7 +37,7 @@ module.exports = {
 
   login: async (data, response) => {
     const result = await queryAsync(
-      'SELECT password_hash FROM users WHERE username = $1::text',
+      'SELECT password_hash, id FROM users WHERE username = $1::text',
       [data.username]
     );
     if (result.rows.length === 0) {
@@ -56,7 +56,8 @@ module.exports = {
       return;
     }
 
-    response.send({"result": {"session_id": 0}});
+    let returnID = JSON.stringify(result.rows[0]);
+    response.send(returnID);
   }
 }
 

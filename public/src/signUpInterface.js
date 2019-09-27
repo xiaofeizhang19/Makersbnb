@@ -5,8 +5,8 @@ $(document).ready(function() {
     var password = $('#password').val();
     var confirmPassword = $('#confirmPassword').val();
     if (password === confirmPassword) {
-      // user1 = new User(username, email, password);
-      // $("#login-confirmation").text("Logged in as: " + username);
+      user1 = new User(username, email, password);
+
       // sessionStorage.setItem('userName', username);
       $.ajax({
         type: "POST",
@@ -18,7 +18,7 @@ $(document).ready(function() {
         },
         success: (data) => {
           alert("We have signed you up");
-          window.location.href = "./menu.html";
+          window.location.href = "./logInPage.html";
         },
         error: (xhr, status, error) => {
           if (xhr.status === 409) {
