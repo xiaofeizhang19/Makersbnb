@@ -6,15 +6,32 @@ $(document).ready(function(){
     var price = $('#price').val();
     var dateFrom = $('#dateFrom').val();
     var dateTo = $('#dateTo').val();
+    //var ownerId = sessionStorage.getItem('userName');
+    var ownerId = 5;
 
-    sessionStorage.setItem('name', name);
-    sessionStorage.setItem('description', description);
-    sessionStorage.setItem('capacity', capacity);
-    sessionStorage.setItem('price', price);
-    sessionStorage.setItem('dateFrom', dateFrom);
-    sessionStorage.setItem('dateTo', dateTo);
-
-    space = new Space(name, description, price, capacity);
-    window.location.replace("./listSpace.html");
+    // sessionStorage.setItem('name', name);
+    // sessionStorage.setItem('description', description);
+    // sessionStorage.setItem('capacity', capacity);
+    // sessionStorage.setItem('price', price);
+    // sessionStorage.setItem('dateFrom', dateFrom);
+    // sessionStorage.setItem('dateTo', dateTo);
+    console.log('space')
+    $.ajax({
+      type: "POST",
+      url: 'http://localhost:3000/space',
+      data: {
+        name,
+        description,
+        price,
+        capacity,
+        ownerId
+      },
+      success: (data) => {
+        //alert(data);
+        //window.location.replace("./listSpace2.html&"+data);
+      }
+    });
+    //space = new Space(name, description, price, capacity);
+    //window.location.replace("./listSpace.html");
   })
 });

@@ -2,23 +2,12 @@ const users = require('../data/users');
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.post('/', async (req, res) => {
+  await users.createAsync(req.body, res);
 });
 
-/* GET users listing. */
-router.get('/:id', function(req, res, next) {
-  console.log(req.params.id, "Aaaaaaaaaaaaaa")
-  res.send('Get');
-});
-
-/* CREATE user */
-router.post('/', function(req, res) {
-  console.log('router');
-  console.log(req.body)
-  users.create(req.body, res);
-  res.send("hello")
+router.post('/login', async (req, res) => {
+  await users.login(req.body, res);
 });
 
 module.exports = router;
