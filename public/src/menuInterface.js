@@ -8,6 +8,9 @@ $(document).ready(function(){
     window.location.replace("./createSpace.html");
   });
   $('#list').click(function(){
+<<<<<<< HEAD
+    window.location.replace("./bookSpace.html");
+=======
     $.ajax({
       type: "GET",
       url: 'http://localhost:3000/space',
@@ -17,6 +20,7 @@ $(document).ready(function(){
         window.location.href = "./listSpace.html";
       }
     });
+>>>>>>> 511f773ade1b3fa4694f75ad593aa324950199c9
   });
   $('#logout').click(function(){
     sessionStorage.removeItem('userName');

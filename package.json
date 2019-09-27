@@ -6,8 +6,12 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "cookie-parser": "^1.4.4",
+=======
     "bcrypt": "^3.0.6",
     "cookie-parser": "~1.4.4",
+>>>>>>> 511f773ade1b3fa4694f75ad593aa324950199c9
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",

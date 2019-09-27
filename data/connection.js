@@ -13,7 +13,7 @@ function query(query, parameters, callback) {
     client.query(query, parameters, (err, res) => {
         client.end();
         callback(err, res);
-    });    
+    });
 };
 
 module.exports = query;
