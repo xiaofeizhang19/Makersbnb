@@ -1,6 +1,7 @@
 Introduction
 ---
-This is the week 6 group chanllenge at Makers Academy. The aim of the application is to implement similar functionalities as airbnb.
+This is the week 6 group chanllenge at Makers Academy. The aim is to build a web
+application with similar functionalities as airbnb.
 
 Instruction
 ---
